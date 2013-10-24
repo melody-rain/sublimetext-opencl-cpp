@@ -7,3 +7,5 @@ How to use it:
 
 Copy the OpenCL C++ folder to C:\Users\Your Account\AppData\Roaming\Sublime Text 2\Packages.
 This path is where your sublime test's "packages" folder exists. 
+
+You can refer to https://github.com/harrism/sublimetext-cuda-cpp for CUDA version. Thanks for harrism's contribution.
