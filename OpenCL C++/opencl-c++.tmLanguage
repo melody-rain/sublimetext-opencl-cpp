@@ -45,7 +45,7 @@
 			<key>comment</key>
 			<string>B.3 BUILT-IN VECTOR TYPES</string>
 			<key>match</key>
-			<string>\b(dim3|char[1-4]|uchar[1-4]|short[1-4]|ushort[1-4]|int[1-4]|uint[1-4]|long[1-4]|ulong[1-4]|longlong[1-4]|ulonglong[1-4]|float[1-4]|double[1-4])\b</string>
+			<string>\b(dim3|char[2|3|4|8|16]|uchar[2|3|4|8|16]|short[2|3|4|8|16]|ushort[2|3|4|8|16]|int[2|3|4|8|16]|uint[2|3|4|8|16]|long[2|3|4|8|16]|ulong[2|3|4|8|16]|longlong[2|3|4|8|16]|ulonglong[2|3|4|8|16]|float[2|3|4|8|16]|double[2|3|4|8|16])\b</string>
 			<key>name</key>
 			<string>support.type.opencl-c++</string>
 		</dict>
@@ -53,7 +53,7 @@
 			<key>comment</key>
 			<string>B.4 BUILT-IN VARIABLES</string>
 			<key>match</key>
-			<string>\b(get_local_id|get_global_id|get_local_size)\b</string>
+			<string>\b(get_local_id|get_global_id|get_local_size|get_num_groups)\b</string>
 			<key>name</key>
 			<string>variable.language.opencl-c++</string>
 		</dict>
@@ -61,7 +61,7 @@
 			<key>comment</key>
 			<string>B.5 MEMORY FENCE FUNCTIONS</string>
 			<key>match</key>
-			<string>\b(barrier)\b</string>
+			<string>\b(barrier|mem_fence|read_mem_fence|write_mem_fence)\b</string>
 			<key>name</key>
 			<string>support.function.opencl-c++</string>
 		</dict>
@@ -69,7 +69,7 @@
 			<key>comment</key>
 			<string>B.6 SYNCHRONIZATION FUNCTIONS</string>
 			<key>match</key>
-			<string>\b__(syncthreads_count|syncthreads_and|syncthreads_or|syncthreads)\b</string>
+			<string>\b(async_work_group_(copy|strided_copy)|wait_group_events|prefetch)\b</string>
 			<key>name</key>
 			<string>support.function.opencl-c++</string>
 		</dict>
@@ -101,7 +101,7 @@
 			<key>comment</key>
 			<string>B.11 ATOMIC FUNCTIONS</string>
 			<key>match</key>
-			<string>\b(atomicExch|atomicAdd|atomicSub|atomicMin|atomicMax|atomicInc|atomicDec|atomicCAS|atomicAnd|atomicXor|atomicOr)\b</string>
+			<string>\b(atom_(add|sub|xchg|inc|dec)|atomic_(add|sub|xchg|inc|dec|cmpxchg|min|max|and|or|xor))\b</string>
 			<key>name</key>
 			<string>support.function.opencl-c++</string>
 		</dict>
